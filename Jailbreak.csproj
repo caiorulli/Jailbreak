@@ -79,7 +79,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\PiroquioBehaviour.cs" />
+    <Compile Include="Assets\Code\CameraMovement.cs" />
+    <Compile Include="Assets\Code\Core\UnityInput.cs" />
+    <Compile Include="Assets\Code\EnemyMovement.cs" />
+    <Compile Include="Assets\Code\PlayerDetection.cs" />
+    <Compile Include="Assets\Code\PlayerMovement.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
