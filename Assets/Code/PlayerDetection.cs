@@ -4,9 +4,9 @@ public class PlayerDetection : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.tag.Equals("Player"))
         {
-            Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 }
