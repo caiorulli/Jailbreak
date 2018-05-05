@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using Jailbreak.Core;
 
 public class PlayerMovement : MonoBehaviour
