@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class JailbreakSceneManager : MonoBehaviour {
 
+
     [SerializeField]
     private bool _autoLoad;
 
@@ -37,11 +38,13 @@ public class JailbreakSceneManager : MonoBehaviour {
 
     public void LoadScene(string scene)
     {
-        SceneManager.LoadScene(scene);
+        Loading.NextScene = scene;
+        SceneManager.LoadScene("Loading");
     }
 
     private void LoadScene()
     {
-        SceneManager.LoadScene(_initialScene);
+        Loading.NextScene = _initialScene;
+        SceneManager.LoadScene("Loading");
     }
 }

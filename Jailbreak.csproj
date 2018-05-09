@@ -97,6 +97,7 @@
     <Compile Include="Assets\Code\Core\UnityInput.cs" />
     <Compile Include="Assets\Code\EnemyMovement.cs" />
     <Compile Include="Assets\Code\JailbreakSceneManager.cs" />
+    <Compile Include="Assets\Code\Loading.cs" />
     <Compile Include="Assets\Code\PlayerDetection.cs" />
     <Compile Include="Assets\Code\PlayerMovement.cs" />
   </ItemGroup>
