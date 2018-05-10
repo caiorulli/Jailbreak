@@ -9,6 +9,14 @@ public class JailbreakSceneManager : MonoBehaviour {
 
     [SerializeField]
     private string _initialScene;
+    [SerializeField]
+    private string _gameOverScene;
+    [SerializeField]
+    private string _victoryScene;
+    [SerializeField]
+    private string[] _levelScenes;
+
+    private int _currentLevel = -1;
 
     private static JailbreakSceneManager _instance;
     public static JailbreakSceneManager Instance
@@ -34,15 +42,39 @@ public class JailbreakSceneManager : MonoBehaviour {
         {
             Invoke("LoadScene", 5);
         }
+        else
+        {
+            LoadInitialScene();
+        }
     }
 
-    public void LoadScene(string scene)
+    public void LoadInitialScene()
     {
-        SceneManager.LoadScene(scene);
-    }
-
-    private void LoadScene()
-    {
+        _currentLevel = -1;
         SceneManager.LoadScene(_initialScene);
+    }
+
+    public void Retry()
+    {
+        _currentLevel = 0;
+        SceneManager.LoadScene(_initialScene);
+    }
+
+    public void LoadNextLevel()
+    {
+        _currentLevel++;
+        if (_currentLevel >= _levelScenes.Length)
+        {
+            SceneManager.LoadScene(_victoryScene);
+        }
+        else
+        {
+            SceneManager.LoadScene(_levelScenes[_currentLevel]);
+        }
+    }
+
+    public void LoadGameOver()
+    {
+        SceneManager.LoadScene(_gameOverScene);
     }
 }

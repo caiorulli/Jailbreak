@@ -267,8 +267,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1156818848}
-        m_MethodName: LoadScene
-        m_Mode: 5
+        m_MethodName: LoadInitialScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -327,6 +327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _autoLoad: 0
   _initialScene: 
+  _gameOverScene: 
+  _victoryScene: 
+  _levelScenes: []
 --- !u!1 &533736150
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +614,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _autoLoad: 0
   _initialScene: 
+  _gameOverScene: 
+  _victoryScene: 
+  _levelScenes: []
 --- !u!1 &1304339351
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,8 +908,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1156818848}
-        m_MethodName: LoadScene
-        m_Mode: 5
+        m_MethodName: Retry
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -149,7 +149,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _autoLoad: 0
-  _initialScene: 
+  _initialScene: Initial2
+  _gameOverScene: Game Over
+  _victoryScene: Victory
+  _levelScenes:
+  - Main
 --- !u!1 &1218478023
 GameObject:
   m_ObjectHideFlags: 0
