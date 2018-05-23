@@ -1,9 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-using System.Collections;
-
-// Montei uma rota ponto por ponto para mostrar para o professor,
-// depois vou fazer algo mais inteligente
 
 public class EnemyMovement : MonoBehaviour {
     [SerializeField]

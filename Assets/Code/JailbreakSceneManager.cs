@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class JailbreakSceneManager : MonoBehaviour {
 
@@ -40,7 +39,7 @@ public class JailbreakSceneManager : MonoBehaviour {
     {
         SceneManager.LoadScene(scene);
     }
-
+    
     private void LoadScene()
     {
         SceneManager.LoadScene(_initialScene);
