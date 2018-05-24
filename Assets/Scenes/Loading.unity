@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf4515aba00844c781b508cd07f15dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextScene: Main
+  _nextScene: StageOne
   _percent: 0
   text: {fileID: 0}
 --- !u!4 &1544999711

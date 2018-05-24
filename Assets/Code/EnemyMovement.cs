@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour {
 	
 	void Update () {
         Vector3 distanceToNextWaypoint = _waypoints[_currentWaypoint].transform.position - transform.position;
-        if (distanceToNextWaypoint.magnitude < 2.5)
+        if (distanceToNextWaypoint.magnitude < 3.5)
         {
             SwitchToNextWaypoint();
             _agent.SetDestination(GetNextWaypointPosition());
@@ -34,5 +34,6 @@ public class EnemyMovement : MonoBehaviour {
     private void SwitchToNextWaypoint()
     {
         _currentWaypoint = (_currentWaypoint + 1) % _waypoints.Length;
+        Debug.Log("Waypoint: " + _currentWaypoint);
     }
 }
