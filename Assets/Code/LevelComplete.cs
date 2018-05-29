@@ -1,3 +1,4 @@
+using Assets.Code;
 using UnityEngine;
 
 public class LevelComplete : MonoBehaviour {
@@ -5,7 +6,8 @@ public class LevelComplete : MonoBehaviour {
     {
         if (other.tag.Equals("Player"))
         {
-            JailbreakSceneManager.Instance.LoadScene("Victory");
+            GameState.Instance.HandleStageCompletion();
+            JailbreakSceneManager.Instance.LoadScene(GameState.LOADING);
         }
     }
 }

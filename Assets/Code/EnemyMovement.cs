@@ -34,6 +34,5 @@ public class EnemyMovement : MonoBehaviour {
     private void SwitchToNextWaypoint()
     {
         _currentWaypoint = (_currentWaypoint + 1) % _waypoints.Length;
-        Debug.Log("Waypoint: " + _currentWaypoint);
     }
 }

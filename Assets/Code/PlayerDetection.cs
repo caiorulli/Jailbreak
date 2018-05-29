@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Code;
+using UnityEngine;
 
 public class PlayerDetection : MonoBehaviour
 {   
@@ -6,7 +7,11 @@ public class PlayerDetection : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            JailbreakSceneManager.Instance.LoadScene("Game Over");
+            RaycastHit hit;
+            Physics.Raycast(transform.position, other.gameObject.transform.position - transform.position, out hit, 15);
+            if (hit.collider.gameObject.Equals(other.gameObject)) {
+                JailbreakSceneManager.Instance.LoadScene(GameState.GAME_OVER);
+            }
         }
     }
 }

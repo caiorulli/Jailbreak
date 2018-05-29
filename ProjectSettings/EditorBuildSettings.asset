@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 9d4d40e2be10b44a6bbecde4f164da0d
   - enabled: 1
-    path: Assets/Scenes/Main.unity
+    path: Assets/Scenes/StageOne.unity
     guid: fc90832205e303349892efd4bd0ad5bf
   - enabled: 1
     path: Assets/Scenes/Victory.unity
@@ -23,3 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: 22f80556f45f5418ab89bbf20cf08cbf
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 205d79c718d62b74081885abf7d9f0a8
+  - enabled: 1
+    path: Assets/Scenes/StageTwo.unity
+    guid: 9d20576a3283faa409306c486c4860ef
+  - enabled: 1
+    path: Assets/Scenes/StageThree.unity
+    guid: 4daf066746833824a8f46be76d4343d5

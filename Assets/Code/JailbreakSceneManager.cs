@@ -1,13 +1,11 @@
-﻿using UnityEngine;
+﻿using Assets.Code;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class JailbreakSceneManager : MonoBehaviour {
 
     [SerializeField]
     private bool _autoLoad;
-
-    [SerializeField]
-    private string _initialScene;
 
     private static JailbreakSceneManager _instance;
     public static JailbreakSceneManager Instance
@@ -42,6 +40,11 @@ public class JailbreakSceneManager : MonoBehaviour {
     
     private void LoadScene()
     {
-        SceneManager.LoadScene(_initialScene);
+        SceneManager.LoadScene(GameState.TUTORIAL);
+    }
+
+    public void LoadLoading()
+    {
+        SceneManager.LoadScene(GameState.LOADING);
     }
 }
