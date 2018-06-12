@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jailbreak", "Jailbreak.csproj", "{352E9579-D04B-6ED1-280A-106980F95278}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jailbreak.Editor", "Jailbreak.Editor.csproj", "{30B868DA-D7C9-4C08-173D-D0D81968F0C9}"
