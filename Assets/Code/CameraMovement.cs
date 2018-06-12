@@ -15,8 +15,6 @@ public class CameraMovement: MonoBehaviour
 
     void Update()
     {
-        // Debug.Log("Look Angle: " + _lookAngle);
-        Debug.Log("Input mouse Y: " + _input.MouseY);
         _lookAngle = Mathf.Clamp(_lookAngle - _input.MouseY, -50, 50);
         transform.localRotation = Quaternion.Euler(_lookAngle, 0, 0);
     }
