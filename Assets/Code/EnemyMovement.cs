@@ -12,17 +12,21 @@ public class EnemyMovement : MonoBehaviour {
     private int _auxValue;
 
 	void Start () {
-        _agent = GetComponent<NavMeshAgent>();
-        _currentWaypoint = 0;
-        _agent.SetDestination(GetNextWaypointPosition());
+        if (_waypoints.Length > 0) {
+            _agent = GetComponent<NavMeshAgent>();
+            _currentWaypoint = 0;
+            _agent.SetDestination(GetNextWaypointPosition());
+        }
 	}
 	
 	void Update () {
-        Vector3 distanceToNextWaypoint = _waypoints[_currentWaypoint].transform.position - transform.position;
-        if (distanceToNextWaypoint.magnitude < 3.5)
-        {
-            SwitchToNextWaypoint();
-            _agent.SetDestination(GetNextWaypointPosition());
+        if (_waypoints.Length > 0) {
+            Vector3 distanceToNextWaypoint = _waypoints[_currentWaypoint].transform.position - transform.position;
+            if (distanceToNextWaypoint.magnitude < 3.5)
+            {
+                SwitchToNextWaypoint();
+                _agent.SetDestination(GetNextWaypointPosition());
+            }
         }
 	}
 
