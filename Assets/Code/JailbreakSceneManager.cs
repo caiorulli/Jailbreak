@@ -9,6 +9,7 @@ public class JailbreakSceneManager : MonoBehaviour {
 
     private static JailbreakSceneManager _instance;
     public static JailbreakSceneManager Instance
+    
     {
         get
         {
@@ -27,6 +28,14 @@ public class JailbreakSceneManager : MonoBehaviour {
 
     private void Start()
     {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "StartScreen" || scene.name == "Victory" || scene.name == "Game Over")
+        {
+            Cursor.visible = true;
+        } else
+        {
+            Cursor.visible = false;
+        }
         if (_autoLoad)
         {
             Invoke("LoadScene", 5);
@@ -34,7 +43,11 @@ public class JailbreakSceneManager : MonoBehaviour {
     }
 
     public void LoadScene(string scene)
-    {
+    {   
+        if (scene == "StartScreen")
+        {
+            GameState.Instance.HandleStageCompletion(scene);
+        }
         SceneManager.LoadScene(scene);
     }
     
