@@ -6,7 +6,7 @@ public class LevelComplete : MonoBehaviour {
     {
         if (other.tag.Equals("Player"))
         {
-            GameState.Instance.HandleStageCompletion();
+            GameState.Instance.HandleStageCompletion(null);
             JailbreakSceneManager.Instance.LoadScene(GameState.LOADING);
         }
     }

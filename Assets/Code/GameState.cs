@@ -41,17 +41,23 @@ namespace Assets.Code
             };
         }
 
-        public void HandleStageCompletion()
+        public void HandleStageCompletion(string scene)
         {
-            _currentStage++;
+            if (scene == "StartScreen")
+            {
+                _currentStage = 0;
+            } else {
+                _currentStage++;
+            }
         }
         
         public string GetNextScene()
         {
             if (_currentStage == _stageSequence.Length)
             {
+                _currentStage = 0;
                 return VICTORY;
-            }   
+            }
             return _stageSequence[_currentStage];
         }
     }
